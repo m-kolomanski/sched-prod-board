@@ -19,7 +19,10 @@
       </div>
       <p data-testid="empty" class="empty" hidden>No incidents tonight.</p>
       <p class="error" data-role="error" role="alert" hidden></p>
-      <ul data-testid="incident-list" class="list"></ul>
+      <div class="layout">
+        <ul data-testid="incident-list" class="list" aria-label="Incidents, newest first. Open one to ack it."></ul>
+        <aside data-testid="incident-panel" class="panel" aria-live="polite" hidden></aside>
+      </div>
     </main>
     <footer>sched-prod incident board · build <code data-testid="build-sha">dev</code></footer>
   </body>
