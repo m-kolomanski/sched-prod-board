@@ -9,3 +9,18 @@ h1 { margin: 0; font-size: 22px; }
 .row.sev2 .sev { color: #a15c00; }
 .row time { color: #555; font-variant-numeric: tabular-nums; }
 footer { color: #777; font-size: 13px; }
+.row { grid-template-columns: 90px 50px 1fr 210px 90px; }
+.row.is-new { animation: flash 4s ease-out; }
+.row.is-acked { background: #f3f8f3; }
+.row.is-acked .what { color: #666; }
+@keyframes flash { from { background: #fff6c2; } to { background: #fff; } }
+.ack { font: inherit; padding: 4px 14px; border: 1px solid #1d1d1f; border-radius: 6px; background: #fff; cursor: pointer; }
+.ack:hover { background: #1d1d1f; color: #fff; }
+.ack:disabled { opacity: .6; cursor: progress; }
+.acked { color: #1b7a2b; font-weight: 600; }
+.loader { display: flex; gap: 10px; align-items: center; padding: 24px 12px; color: #555; }
+.spinner { width: 16px; height: 16px; border: 2px solid #ccc; border-top-color: #1d1d1f; border-radius: 50%; animation: spin .8s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }
+.empty { color: #555; padding: 24px 12px; }
+.error { color: #b00020; padding: 8px 12px; }
+.status { font-size: 13px; }
